@@ -1,28 +1,20 @@
 import java.util.Date;
 
 public class Reservation {
-    private int numero;
     private Date dateArrivee;
     private Date dateDepart;
     private int nbOccupants;
+    private Categorie maCategorie;
     private Statut monStatut;
     private Chambre maChambre;
 
-    public Reservation(int numero, Date dateArrivee, Date dateDepart, int nbOccupants, Statut monStatut, Chambre maChambre) {
-        this.numero = numero;
+    public Reservation(Date dateArrivee, Date dateDepart, int nbOccupants, Categorie maCategorie) {
         this.dateArrivee = dateArrivee;
         this.dateDepart = dateDepart;
         this.nbOccupants = nbOccupants;
-        this.monStatut = monStatut;
-        this.maChambre = maChambre;
-    }
-
-    public int getNumero() {
-        return numero;
-    }
-
-    public void setNumero(int numero) {
-        this.numero = numero;
+        this.maCategorie = maCategorie;
+        this.monStatut = Statut.EnAttente;
+        this.maChambre = null;
     }
 
     public Date getDateArrivee() {
@@ -47,6 +39,14 @@ public class Reservation {
 
     public void setNbOccupants(int nbOccupants) {
         this.nbOccupants = nbOccupants;
+    }
+
+    public Categorie getMaCategorie() {
+        return maCategorie;
+    }
+
+    public void setMaCategorie(Categorie maCategorie) {
+        this.maCategorie = maCategorie;
     }
 
     public Statut getMonStatut() {
