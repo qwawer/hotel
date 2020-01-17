@@ -3,4 +3,3 @@ public enum Categorie {
     Confort,
     ConfortPlus
 }
-
