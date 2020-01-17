@@ -46,9 +46,10 @@ public class Client {
         this.mesReservations = mesReservations;
     }
 
-    public void reserver(Date DateArr, Date DateDep, int nbPersonne, Categorie maCategorie){
+    public void reserver(Hotel monHotel, Date DateArr, Date DateDep, int nbPersonne, Categorie maCategorie){
         Reservation res = new Reservation(DateArr,DateDep, nbPersonne, maCategorie);
         mesReservations.add(res);
+        monHotel.getMesReservations().add(res);
     }
 
     public void annulerReservation(Reservation maReservation){
