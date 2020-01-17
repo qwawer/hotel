@@ -6,13 +6,15 @@ public class Reservation {
     private Date dateDepart;
     private int nbOccupants;
     private Statut monStatut;
+    private Chambre maChambre;
 
-    public Reservation(int numero, Date dateArrivee, Date dateDepart, int nbOccupants, Statut monStatut) {
+    public Reservation(int numero, Date dateArrivee, Date dateDepart, int nbOccupants, Statut monStatut, Chambre maChambre) {
         this.numero = numero;
         this.dateArrivee = dateArrivee;
         this.dateDepart = dateDepart;
         this.nbOccupants = nbOccupants;
         this.monStatut = monStatut;
+        this.maChambre = maChambre;
     }
 
     public int getNumero() {
@@ -53,5 +55,13 @@ public class Reservation {
 
     public void setMonStatut(Statut monStatut) {
         this.monStatut = monStatut;
+    }
+
+    public Chambre getMaChambre() {
+        return maChambre;
+    }
+
+    public void setMaChambre(Chambre maChambre) {
+        this.maChambre = maChambre;
     }
 }
