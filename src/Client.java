@@ -49,7 +49,6 @@ public class Client {
     public void reserver(Date DateArr, Date DateDep, int nbPersonne, Categorie maCategorie){
         Reservation res = new Reservation(DateArr,DateDep, nbPersonne, maCategorie);
         mesReservations.add(res);
-
     }
 
     public void annulerReservation(Reservation maReservation){
