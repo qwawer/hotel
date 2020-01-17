@@ -11,6 +11,7 @@ public class Client {
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;
+        this.mesReservations = null;
     }
 
     public String getNom() {
